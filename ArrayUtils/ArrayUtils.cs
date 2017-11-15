@@ -66,6 +66,11 @@
 
         private static void CheckSortedArray<T>(T[] array, IComparer<T> comparer)
         {
+            if (array.Length == 1 || array.Length == 0)
+            {
+                return;
+            }
+
             for (var i = 0; i < array.Length - 1; i++)
             {
                 if (comparer.Compare(array[i], array[i + 1]) > 0)
