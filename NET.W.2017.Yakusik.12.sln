@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayUtils.UnitTests", "Arr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumerableGenerator", "EnumerableGenerator\EnumerableGenerator.csproj", "{8FB00B61-B512-4687-B00B-4B2F808F8476}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer", "Timer\Timer.csproj", "{C7687A16-4CA8-4AF4-8FB1-83F99FCC5083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timer.Example", "Timer.Example\Timer.Example.csproj", "{92A4D04E-9315-4444-813A-72443A373D4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8FB00B61-B512-4687-B00B-4B2F808F8476}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FB00B61-B512-4687-B00B-4B2F808F8476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FB00B61-B512-4687-B00B-4B2F808F8476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7687A16-4CA8-4AF4-8FB1-83F99FCC5083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7687A16-4CA8-4AF4-8FB1-83F99FCC5083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7687A16-4CA8-4AF4-8FB1-83F99FCC5083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7687A16-4CA8-4AF4-8FB1-83F99FCC5083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A4D04E-9315-4444-813A-72443A373D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A4D04E-9315-4444-813A-72443A373D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A4D04E-9315-4444-813A-72443A373D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A4D04E-9315-4444-813A-72443A373D4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
