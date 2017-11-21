@@ -17,12 +17,11 @@
         /// <param name="comparer">Object to compare array elements.</param>
         /// <returns>Index of the sought element in the array. If no such element found, returns -1.</returns>
         /// <exception cref="ArgumentNullException"><paramref name="array"/> is null.</exception>
-        /// <exception cref="ArgumentNullException"><paramref name="comparer"/> is null.</exception>
         /// <exception cref="ArgumentException"><paramref name="array"/> is not sorted in ascendant order.</exception>
         public static int BinarySearch<T>(T[] array, T soughtElement, IComparer<T> comparer)
         {
             array = array ?? throw new ArgumentNullException($"{nameof(array)} cannot be null.");
-            comparer = comparer ?? throw new ArgumentNullException($"{nameof(comparer)} cannot be null.");
+            comparer = comparer ?? Comparer<T>.Default;
 
             CheckSortedArray(array, comparer);
 
