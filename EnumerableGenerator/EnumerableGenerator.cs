@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Numerics;
 
     public static class EnumerableGenerator
     {
@@ -13,13 +14,22 @@
         /// <param name="numbersAmount">Index of the last element in the sequence.</param>
         /// <returns>Enumeration of fibonacci numbers.</returns>
         /// <exception cref="ArgumentException"><paramref name="numbersAmount"/> is less than 1.</exception>
-        public static IEnumerable<int> FibonacciSequence(int numbersAmount)
+        public static IEnumerable<BigInteger> FibonacciSequence(long numbersAmount)
         {
             numbersAmount = numbersAmount >= 1 ? numbersAmount : 
-                                                 throw new ArgumentException($"{nameof(numbersAmount)} must be greater than zero."); 
+                                                 throw new ArgumentException($"{nameof(numbersAmount)} must be greater than zero.");
 
-            int prePrevious = 0;
-            int previous = 1;
+            return Fibonacci(numbersAmount);
+        }
+
+        #endregion
+
+        #region Private methods
+
+        private static IEnumerable<BigInteger> Fibonacci(long numbersAmount)
+        {
+            BigInteger prePrevious = 0;
+            BigInteger previous = 1;
 
             yield return prePrevious;
 
@@ -28,9 +38,9 @@
                 yield return previous;
             }
 
-            for (int i = 2; i < numbersAmount; i++)
+            for (long i = 2; i < numbersAmount; i++)
             {
-                int current = previous + prePrevious;
+                BigInteger current = previous + prePrevious;
                 prePrevious = previous;
                 previous = current;
 
